@@ -70,15 +70,6 @@ body {
   color: var(--white-color);
 }
 
-
-
-
-
-
-
-
-
-
 /* Хедер навигация */
 
 .header {
@@ -147,7 +138,6 @@ body {
 .nav__link--active{
   color: var(--accent-color);
 }
-
 .contact__list,
 .nav__list{
   display: flex;
@@ -180,36 +170,10 @@ body {
   fill: currentColor;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* герой */
 
 .hero {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -223,7 +187,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-.hero-title{
+.section__hero{
+  padding: 0;
+}
+.hero__title{
   width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -237,7 +204,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0.06em;
 }
-.hero-button{
+.hero__button{
   display: inline-block;
   width: 216px;
   height: 50px;
@@ -257,19 +224,21 @@ body {
 }
 
 /* принципы */
-
-.principles-list{
+.section__principles{
+  padding-bottom: 0;
+}
+.principles__list{
   display: flex;
   margin: 0;
 }
-.principles-list > li{
+.principles__item{
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
 }
-.principles-list > li:last-child{
+.principles__item:last-child{
   margin-right: 0;
 }
-.principle-title{
+.principles__title{
   margin-top: 0;
   margin-bottom: 10px;
   
@@ -281,16 +250,39 @@ body {
 
   color: var(--title-text-color);
 }
-.principle {
+.principles__info {
   margin: 0;
 
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
-.principles{
-  padding-bottom: 0;
+.principles__conteiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* чем заняты */
 
@@ -328,16 +320,6 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
-}
-.icon-principles{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  margin-bottom: 30px;
-
-  background-color: #f5f4fa;
-  border-radius: 4px;
 }
 .activty-backdrop{
   position: absolute;
