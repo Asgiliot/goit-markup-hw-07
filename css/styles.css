@@ -71,9 +71,17 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
 /* Хедер навигация */
 
-.page-header {
+.header {
   background-color: var(--white-bg-color);
   border-bottom: 1px solid #ECECEC;
 }
@@ -85,13 +93,13 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.site-nav{
+.nav{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav-list .link,
-.active-link {
+.nav__link,
+.nav__link--active {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -104,17 +112,17 @@ body {
   color: var(--title-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.active-link {
+.nav__link--active {
   color: var(--accent-color);
 }
 
-.nav-list .link:hover,
-.nav-list .link:focus,
-.autent-list .link:hover,
-.autent-list .link:focus {
+.nav__link:hover,
+.nav__link:focus,
+.contact__link:hover,
+.contact__link:focus {
   color: var(--accent-color);
 }
-.active-link::after{
+.nav__link--active::after{
   content: "";
   position: absolute;
   display: block;;
@@ -127,32 +135,32 @@ body {
   background-color: var(--accent-color);
 }
 
-.nav-list > li,
-.autent-list > li{
+.nav__item,
+.contact__item{
   position: relative;
   margin-right: 50px;
 }
-.nav-list > li:last-child,
-.autent-list > li:last-child{
+.nav__item:last-child,
+.contact__item:last-child{
   margin-right: 0px;
 }
-.activ-link{
+.nav__link--active{
   color: var(--accent-color);
 }
 
-.autent-list,
-.nav-list{
+.contact__list,
+.nav__list{
   display: flex;
   list-style: none;
   align-items: center;
   margin-top: 0;
   margin-bottom: 0;
 }
-.autent-list{
+.contact__list{
   margin-left: auto;
 
 }
-.autent-list .link {
+.contact__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: flex;
@@ -167,10 +175,34 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-autent{
+.contact__icon{
   margin-right: 10px;
   fill: currentColor;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* герой */
 
