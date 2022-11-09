@@ -48,7 +48,7 @@ body {
   padding-bottom: 94px;
 }
 
-/* лого*/
+/* Хедер лого*/
 
 .logo {
   display: inline-block;
@@ -56,30 +56,27 @@ body {
   padding-bottom: 25px;
   margin-right: 93px;
 
-  color: #000000;
+  color:  var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
-.logo--blue-part {
-  color: var(--accent-color);
+.logo--black__part {
+  color: #000000
 }
-
-.logo--white-part {
-
+.logo--white__part {
   color: var(--white-color);
 }
 
 
-
 /* Хедер навигация */
+
 .page-header {
   background-color: var(--white-bg-color);
   border-bottom: 1px solid #ECECEC;
 }
-
 .content{
   width: 1200px;
   padding-left: 15px;
@@ -88,7 +85,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.page-header__nav{
+.site-nav{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,13 +127,13 @@ body {
   background-color: var(--accent-color);
 }
 
-.nav-list .nav__item,
-.autent-list .nav__item{
+.nav-list > li,
+.autent-list > li{
   position: relative;
   margin-right: 50px;
 }
-.nav-list .nav__item:last-child,
-.autent-list .nav__item:last-child{
+.nav-list > li:last-child,
+.autent-list > li:last-child{
   margin-right: 0px;
 }
 .activ-link{
@@ -174,21 +171,6 @@ body {
   margin-right: 10px;
   fill: currentColor;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* герой */
 
