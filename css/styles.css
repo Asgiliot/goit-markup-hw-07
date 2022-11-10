@@ -228,7 +228,6 @@ body {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   border-radius: 4px;
-
 }
 
 /* принципы */
@@ -715,9 +714,6 @@ body {
   position: relative;
   overflow: hidden; 
 }
-
-/* МОДАЛКА */
-
 .projects-backdrop{
   display: block;
   position: absolute;
@@ -742,7 +738,40 @@ body {
 .projects-link:hover .projects-backdrop{
   transform: translateY(0);
 }
-.backdrop-modal{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* МОДАЛКА */
+
+.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+} 
+.modal-backdrop{
   position: fixed;
   top: 0;
   left: 0;
@@ -753,7 +782,7 @@ body {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal{
+.modal__window{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -765,31 +794,25 @@ body {
   background: var(--white-bg-color);
 } 
 
-.button-close{
+.modal__button--close{
   position: absolute;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
+
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 50%;
   fill:currentColor
 }
-.button-close:focus,
-.button-close:hover{
+.modal__button--close:focus,
+.modal__button--close:hover{
   fill: var(--accent-color)
   
 }
-
-.backdrop-modal.is-hidden{
-  opacity: 0;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-} 
-.modal p{
+.modal__info{
  margin-top: 0;
  margin-bottom: 30px;
 
@@ -802,29 +825,28 @@ body {
  color: var(--title-text-color);
 }
 
-/* ФОРМА */
+/* ФОРМА в МОДАЛКЕ */
 
-.form-box{
+.form__container{
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 28px;
 }
 
-.modal-label{
+.form__modal-label{
   position: absolute;
   top: -4px;
   transform: translateY(-100%);
   margin-bottom: 4px;
 }
-.modal-label,
-.modal-comments{
+.form__modal-label{
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
 
 }
-.modal-input{
+.form__modal-input{
   width: 448px;
   height: 40px;
   padding-left: 42px;;
@@ -833,7 +855,16 @@ body {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-box .modal-icon{
+.form__modal-textarea{
+  width: 448px;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__modal-icon{
   position: absolute;
   top: 50%;
   left: 15px;
@@ -843,32 +874,26 @@ body {
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-box textarea{
-  width: 448px;
-  height: 120px;
-  resize: none;
-  padding: 12px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-textarea::placeholder{
+
+.form__modal-textarea::placeholder{
   color:  #75757550;
 }
-.modal-input:focus ~ .modal-icon,
-.modal-input:focus,
-.form-box textarea:focus{
+.form__modal-input:focus ~ .form__modal-icon,
+.form__modal-input:focus,
+.form__modal-icon:focus,
+.form__modal-textarea:focus{
   fill: var(--accent-color);
   border-color:  var(--accent-color);
 }
-.form-checkbox{
+.form__checkbox{
   position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
   margin-bottom: 30px;
+
 }
-.checkbox-label{
+.form__checkbox-label{
   display: block;
   font-size: 14px;
   line-height: 1.7;
@@ -876,26 +901,26 @@ textarea::placeholder{
   letter-spacing: 0.03em;
   cursor: pointer;
 }
-.form-box:nth-child(4){
+.form__container:nth-child(4){
   margin-bottom: 20px;
 }
-.form-box:last-child{
+.form__container:last-child{
   margin: 0;
 }
-.form-checkbox a{
+.form__checkbox-link{
   margin-left: 4px;
   text-decoration:underline;
   color: var(--accent-color)
 }
-.checkbox-input{
+.form__checkbox-input{
   appearance: none;
   margin: 0;
 }
-.checkbox-icon{
+.form__checkbox-icon{
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   top: 4px;
   left: 16px;
   display: inline-block;
@@ -909,25 +934,11 @@ textarea::placeholder{
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
    250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-input:checked + .checkbox-icon{
+.form__checkbox-input:checked + .form__checkbox-icon{
   border-color: var(--accent-color);
   background-color: var(--accent-color);
 }
-.modal-button {
-  display: inline-block;
+.form__modal-button{
   width: 200px;
-  height: 50px;
   margin: 0 auto;
-  padding: 0;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-
-  color: var(--white-color);
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  border-radius: 4px;
 }
