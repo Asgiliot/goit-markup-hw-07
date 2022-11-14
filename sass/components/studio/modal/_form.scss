@@ -113,7 +113,7 @@
     height: 15px;
     border: 2px solid $title-text-color;
     border-radius: 2px;
-    background-image: url(../../../../images/icon-check.svg);
+    background-image: url(../images/icon-check.svg);
     background-position: center;
     
     @include transition(background-color);
