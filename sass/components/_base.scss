@@ -1,0 +1,49 @@
+html{
+    box-sizing: border-box;
+  }
+  *,
+  *::after,
+  *::before{
+    box-sizing: inherit;
+    list-style: none;
+    text-decoration: none;
+    padding-inline-start: 0; 
+    outline: none;
+  } 
+  body {
+    color: $main-text-color;
+    background-color: $white-color;
+    font-family: $main-font-family;
+    margin: 0;
+  }
+  .section{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .content{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .content--column{
+    flex-direction: column;
+  } 
+  .visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+

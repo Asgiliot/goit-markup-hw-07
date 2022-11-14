@@ -9,14 +9,14 @@
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" 
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
                                     <!-- щапка -->
   <header class="header">
     <div class="content">
       <nav class="header-nav">
-        <a class="logo" href="./index.html">Web<span class="logo__black-part">Studio</span></a>
+        <a class="logo header__logo--padding" href="./index.html">Web<span class="logo__black-part">Studio</span></a>
         <ul class="header-nav__list">
           <li class="header-nav__item">
             <a class="header-nav__link--active" href="./index.html">Студія</a>
@@ -64,7 +64,7 @@
       <ul class="principles__list">
         <li class="principles__item">
           <div class="principles__container">
-            <svg class="icon-antena" width="65" height="70">
+            <svg class="principles__icon" width="65" height="70">
               <use href="./images/sprite.svg#icon-antena"></use>
             </svg>
           </div>
@@ -73,7 +73,7 @@
         </li>
         <li class="principles__item">
           <div class="principles__container">
-            <svg class="icon-clock" width="67" height="70">
+            <svg class="principles__icon" width="67" height="70">
               <use href="./images/sprite.svg#icon-clock"></use>
             </svg>
           </div>
@@ -82,7 +82,7 @@
         </li>
         <li class="principles__item">
           <div class="principles__container">
-            <svg class="icon-diagram" width="70" height="54">
+            <svg class="principles__icon" width="70" height="54">
               <use href="./images/sprite.svg#icon-diagram"></use>
             </svg>
           </div>
@@ -91,7 +91,7 @@
         </li>
         <li class="principles__item">
           <div class="principles__container">
-            <svg class="icon-astronaut" width="70" height="70">
+            <svg class="principles__icon" width="70" height="70">
               <use href="./images/sprite.svg#icon-astronaut"></use>
             </svg>
           </div>
@@ -342,7 +342,7 @@
 <footer class="footer">
   <div class="content footer-padding">
     <div class="footer__address-container">
-      <a class="logo footer-logo--padding" href="./index.html">Web<span class="logo__white-part">Studio</span></a>
+      <a class="logo footer__logo--padding" href="./index.html">Web<span class="logo__white-part">Studio</span></a>
       <address>
         <ul class="footer__list">
           <li class="footer__item">
@@ -395,7 +395,7 @@
         <h3 class="footer__community-title">Підпишіться на розсилку</h3>
         <form class="footer-form">
           <input class="footer-form__input" type="email" placeholder="E-mail">
-          <button class="button footer-form__button" type="submit">
+          <button class="button footer__form-button" type="submit">
             Підписатися
             <svg class="icon-send" width="24" height="24">
               <use href="./images/sprite.svg#icon-send"></use>

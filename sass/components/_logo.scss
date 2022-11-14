@@ -1,0 +1,34 @@
+  .logo {
+    display: inline-block;
+    margin-right: 93px;
+  
+    color: $accent-color;
+    font-family: $second-font-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+  .logo__black-part {
+    color: #000000;
+  }
+  .header__logo--padding{
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+// стили для лого футер
+
+
+  .logo__white-part {
+    color: $white-color;
+  }
+  .footer-logo--padding{
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+ 
+ 
+
+ 
+  

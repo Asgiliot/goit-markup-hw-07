@@ -1,0 +1,49 @@
+.community{
+    display: flex;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+.community__item:not(:last-child){
+    margin-right: 10px;
+}
+.community__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+  
+    text-align: center;
+    fill: #afb1b8;
+  
+    @include transition(background-color);
+} 
+.community__icon{
+    @include transition(fill);
+}
+.community__link:hover,
+.community__link:focus{
+    background-color: $accent-color;
+    fill: $white-color;
+}
+
+// стили для комьюнити футер
+
+.footer-community--padding{
+    margin: 0;
+    padding: 0;
+}
+.footer-community__link{
+    fill: $white-color;
+    background-color: #ffffff10;
+
+    &:hover,
+    &:focus{
+      background-color: $accent-color;
+      fill: $white-color;
+    }
+}
+.footer__community-container:first-child{
+    margin-right: 93px;
+}

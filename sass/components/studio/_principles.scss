@@ -1,0 +1,45 @@
+.principles{
+    padding-bottom: 0;
+  }
+  .principles__list{
+    display: flex;
+    margin: 0;
+  }
+  .principles__item{
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+
+    &:last-child{
+        margin-right: 0;
+      }
+  }
+
+  .principles__title{
+    margin-top: 0;
+    margin-bottom: 10px;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  
+    color: $title-text-color;
+  }
+  .principles__info {
+    margin: 0;
+  
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
+  .principles__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+  
+    background-color: $grey-bg-color;
+    border-radius: 4px;
+  }
