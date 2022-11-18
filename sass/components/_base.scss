@@ -23,15 +23,14 @@ html{
     padding-top: 94px;
     padding-bottom: 94px;
   }
-  .content{
+  .container{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
   }
-  .content--column{
+  .container--column{
     flex-direction: column;
   } 
   .visually-hidden {
